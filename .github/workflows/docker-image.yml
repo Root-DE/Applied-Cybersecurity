@@ -2,7 +2,7 @@ name: Dockerfile
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   schedule:
     - cron:  '0 8 * * *'
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Build
       run: docker build . -t ghcr.io/Root-DE/Applied-Cybersecurity/scan:latest
     - name: Push
