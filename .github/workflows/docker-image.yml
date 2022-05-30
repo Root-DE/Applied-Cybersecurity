@@ -15,8 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: docker build . -t ghcr.io/Root-DE/Applied-Cybersecurity/scan:latest
+      run: docker build . -t ghcr.io/root-de/applied-cybersecurity/scan:latest
     - name: Push
-      run: docker push ghcr.io/Root-DE/Applied-Cybersecurity/scan:latest
+      run: docker push ghcr.io/root-de/applied-cybersecurity/scan:latest
     
 
