@@ -1,6 +1,6 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 RUN apt update; apt dist-upgrade -y
-RUN apt install -y curl wget
+RUN apt install -y curl wget git
 
 # Install Syft
 RUN curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/bin
