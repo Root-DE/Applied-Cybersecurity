@@ -8,3 +8,7 @@ RUN curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | 
 # Install Grype + update db
 RUN curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/bin
 RUN grype db update
+
+# add send_script.sh
+COPY send_script.sh /usr/bin/send_script.sh
+RUN chmod +x /usr/bin/send_script.sh
